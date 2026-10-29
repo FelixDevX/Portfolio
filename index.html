@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Felix Y Lingam — Full Stack Developer and CS Engineering student at Jain College of Engineering, Belagavi. Explore projects, skills, and experience." />
+  <meta name="keywords" content="Felix Y Lingam, Full Stack Developer, Software Engineer, React, Node.js, Portfolio, Belagavi" />
+  <meta name="author" content="Felix Y Lingam" />
+  <meta property="og:title" content="Felix Y Lingam | Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Building digital experiences that feel different." />
+  <meta property="og:type" content="website" />
+  <title>Felix Y Lingam | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Felix Y Lingam Home">
+        <span class="logo-bracket">&lt;</span>Felix<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home"         class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#experience"   class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#skills"       class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#education"    class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1 class="hero-name">Hi, I'm <span class="gradient-text">Felix Y Lingam</span>.</h1>
+        <h2 class="hero-headline">Building Digital Experiences<br class="br-desktop" /> That Feel <span class="hero-accent">Different.</span></h2>
+        <p class="hero-sub">I'm a Computer Science Engineering student and developer passionate about full-stack development, AI-powered applications, and creating useful digital experiences.</p>
+        <div class="hero-title-badge">
+          <span class="mono-text">Full Stack Developer</span>
+          <span class="badge-divider">|</span>
+          <span class="mono-text">Aspiring Software Engineer</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="exploreProjectsBtn">
+            <span>Explore My Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="contactMeBtn"><span>Contact Me</span></a>
+          <!--
+            RESUME: Place your resume PDF at portfolio/assets/FelixResume.pdf
+            The download button below will serve it directly.
+          -->
+          <a href="assets/FelixResume.pdf" class="btn btn-ghost" id="downloadResumeBtn" download="Felix_Y_Lingam_Resume.pdf" target="_blank" rel="noopener noreferrer">>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/FelixDevX" class="social-link" id="heroGithubLink" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/felix-lingam-9354b327a/" class="social-link" id="heroLinkedinLink" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!--
+          ═══════════════════════════════════════════════════════════
+          PROFILE PHOTO — HOW TO REPLACE THE PLACEHOLDER
+          ═══════════════════════════════════════════════════════════
+          1. Crop your photo to a square (1:1) aspect ratio.
+          2. Resize to at least 600×600 px for best quality.
+          3. Save the file as: portfolio/assets/images/profile.jpg
+          4. The <img> below will automatically show your photo.
+          5. Once your photo is in place, you can remove the
+             onerror attribute and the #profileFallback div.
+          ═══════════════════════════════════════════════════════════
+        -->
+        <div class="profile-frame" id="profileFrame">
+          <div class="profile-ring profile-ring-1" aria-hidden="true"></div>
+          <div class="profile-ring profile-ring-2" aria-hidden="true"></div>
+          <div class="profile-glow" aria-hidden="true"></div>
+          <img
+            src="assets/images/profile.jpg"
+            alt="Felix Y Lingam — Full Stack Developer"
+            class="profile-img"
+            id="profileImg"
+            onerror="this.style.display='none'; document.getElementById('profileFallback').style.display='flex';"
+          />
+          <!-- CSS-generated avatar fallback shown when profile.jpg is missing -->
+          <div class="profile-fallback" id="profileFallback" style="display:none;" aria-hidden="true">
+            <svg class="avatar-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#020617"/>
+                </radialGradient>
+                <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#38bdf8"/>
+                  <stop offset="100%" style="stop-color:#818cf8"/>
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="100" fill="url(#bgGrad)"/>
+              <circle cx="100" cy="80" r="36" fill="url(#avatarGrad)" opacity="0.9"/>
+              <ellipse cx="100" cy="165" rx="58" ry="40" fill="url(#avatarGrad)" opacity="0.75"/>
+              <text x="100" y="92" text-anchor="middle" fill="white" font-size="30" font-family="Inter,sans-serif" font-weight="700">FL</text>
+            </svg>
+          </div>
+          <div class="profile-badge">
+            <span class="badge-pulse"></span>
+            <span>Open to Work</span>
+          </div>
+        </div>
+        <div class="floating-card floating-card-1" aria-hidden="true">
+          <span class="fc-label">// Focus</span>
+          <span class="fc-value text-blue">Full Stack Dev</span>
+        </div>
+        <div class="floating-card floating-card-2" aria-hidden="true">
+          <span class="fc-label">CGPA</span>
+          <span class="fc-value">8.4 <span class="text-green">&#8593;</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-label="Scroll down indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about" aria-label="About me">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 01. About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">I'm <strong class="text-blue">Felix Y Lingam</strong>, a Computer Science Engineering student at <strong>Jain College of Engineering, Belagavi</strong>, expected to graduate in 2027.</p>
+          <p>I'm genuinely excited about the intersection of software engineering and real-world problem solving. Whether it's building a secure full-stack web application, training a machine learning model to detect exoplanets, or contributing to open-source projects — I care about the craft and the impact.</p>
+          <p>My journey has taken me from writing my first lines of C to building full-stack applications with React and Node.js, exploring AI and ML with Python, and participating in global challenges like the NASA Space Apps Challenge 2025. I believe in learning by building and shipping things that actually work.</p>
+          <p>When I'm not coding, I'm contributing to my college's Fine Arts Club, exploring how technology and creativity can intersect in unexpected ways.</p>
+        </div>
+        <div class="about-interests reveal">
+          <h3 class="interests-title">What I'm Into</h3>
+          <div class="interest-cards">
+            <div class="interest-card" id="interestFullstack">
+              <div class="interest-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div><h4>Full-Stack Development</h4><p>React, Node.js, databases — end-to-end product thinking</p></div>
+            </div>
+            <div class="interest-card" id="interestAI">
+              <div class="interest-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+              <div><h4>AI &amp; Machine Learning</h4><p>Scikit-learn, data analysis, intelligent applications</p></div>
+            </div>
+            <div class="interest-card" id="interestSoftware">
+              <div class="interest-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div><h4>Software Engineering</h4><p>Clean code, design patterns, scalable architectures</p></div>
+            </div>
+            <div class="interest-card" id="interestProblem">
+              <div class="interest-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div><h4>Problem Solving</h4><p>DSA, competitive thinking, practical solutions</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section section-dark" id="experience" aria-label="Work experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 02. Experience</span>
+        <h2 class="section-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" id="expFutureInterns">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Full Stack Development Intern</h3>
+                <span class="timeline-company">Future Interns</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Dec 2025 – Jan 2026</span>
+                <span class="timeline-badge">Internship</span>
+              </div>
+            </div>
+            <p class="timeline-desc">Developed and maintained responsive full-stack web applications. Built RESTful APIs with Node.js and Express.js, designed and queried SQL and MongoDB databases, and integrated React.js frontends. Contributed to debugging, performance optimization, and deployment of production-ready features.</p>
+            <div class="timeline-tags">
+              <span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">SQL</span><span class="tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal" id="expGirlScript">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Open Source Contributor</h3>
+                <span class="timeline-company">GirlScript Summer of Code</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Jun 2026 – Jul 2026</span>
+                <span class="timeline-badge timeline-badge-green">Open Source</span>
+              </div>
+            </div>
+            <p class="timeline-desc">Contributed code improvements and UI enhancements to open-source projects. Collaborated with maintainers via GitHub using structured Git workflows — raising pull requests, resolving issues, reviewing code, and participating in community-driven development.</p>
+            <div class="timeline-tags">
+              <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Pull Requests</span><span class="tag">UI Improvements</span><span class="tag">Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects" aria-label="Featured projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 03. Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-sub">Real projects. Real code. Real impact.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- ExoVision AI -->
+        <article class="project-card project-exo reveal" id="projectExoVision">
+          <div class="project-visual project-visual-exo" aria-hidden="true">
+            <div class="exo-stars"></div>
+            <div class="exo-planet"></div>
+            <div class="exo-ring"></div>
+            <div class="project-overlay"></div>
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-category">AI / Astronomy</span>
+              <div class="project-links-top">
+                <a href="https://github.com/FelixDevX/project-loka-major" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="ExoVision AI on GitHub" id="exoGithubLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://project-loka-major-yuma-azure.vercel.app/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="ExoVision AI live demo" id="exoLiveIconLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">ExoVision AI</h3>
+            <p class="project-desc">An AI-powered exoplanet detection and classification platform that analyzes astronomical data using machine learning. Built during the NASA Space Apps Challenge 2025 — turning Kepler telescope data into meaningful planetary insights.</p>
+            <div class="project-tags">
+              <span class="tag tag-accent">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">React.js</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://project-loka-major-yuma-azure.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="exoLiveDemoBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/FelixDevX/project-loka-major" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" id="exoSourceBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SecureVault -->
+        <article class="project-card project-vault reveal" id="projectSecureVault">
+          <div class="project-visual project-visual-vault" aria-hidden="true">
+            <div class="vault-grid"></div>
+            <div class="vault-icon">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="28" width="60" height="44" rx="8" stroke="#38bdf8" stroke-width="2.5" fill="rgba(56,189,248,0.06)"/>
+                <path d="M26 28V20a14 14 0 0 1 28 0v8" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="40" cy="50" r="8" stroke="#38bdf8" stroke-width="2" fill="rgba(56,189,248,0.12)"/>
+                <line x1="40" y1="58" x2="40" y2="65" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="project-overlay"></div>
+            <span class="project-number">02</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-category">Security / Full-Stack</span>
+              <div class="project-links-top">
+                <a href="https://github.com/FelixDevX/secureVault" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="SecureVault on GitHub" id="vaultGithubLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://vault-nine-livid.vercel.app/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="SecureVault live demo" id="vaultLiveIconLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">SecureVault</h3>
+            <p class="project-desc">A secure file locker with authenticated uploads, file management, and encrypted downloads. Features JWT authentication, bcrypt password hashing, AES-256 encryption, and Cloudinary cloud storage — security at every layer.</p>
+            <div class="project-tags">
+              <span class="tag tag-accent">React.js</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">AES-256</span><span class="tag">Cloudinary</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://vault-nine-livid.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="vaultLiveDemoBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/FelixDevX/secureVault" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" id="vaultSourceBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Weather Advisor -->
+        <article class="project-card project-weather reveal" id="projectWeatherAdvisor">
+          <div class="project-visual project-visual-weather" aria-hidden="true">
+            <div class="weather-clouds"></div>
+            <div class="weather-glow"></div>
+            <div class="project-overlay"></div>
+            <span class="project-number">03</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-category">AI / Travel</span>
+              <div class="project-links-top">
+                <!--
+                  SOURCE CODE: Replace '#' with your GitHub repo URL once available.
+                  Example: href="https://github.com/FelixDevX/weather-advisor"
+                -->
+                <span class="icon-link icon-link-disabled" title="Repository link coming soon" aria-label="Source code coming soon" id="weatherGithubLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </span>
+                <a href="https://weatheradvisor.vercel.app/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Weather Advisor live demo" id="weatherLiveIconLink">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Weather Advisor</h3>
+            <p class="project-desc">An AI-powered weather and travel advisor combining real-time weather data with Gemini AI to deliver personalized travel recommendations, packing tips, and safety insights — so you're always prepared wherever you're going.</p>
+            <div class="project-tags">
+              <span class="tag tag-accent">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">OpenWeather API</span><span class="tag">Gemini API</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://weatheradvisor.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="weatherLiveDemoBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <!-- Replace this span with an <a> tag once your repository is available -->
+              <span class="btn btn-ghost btn-sm btn-disabled" aria-disabled="true" id="weatherSourceBtn" title="Repository coming soon">Source Code</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-dark" id="skills" aria-label="Skills and technologies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 04. Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+        <p class="section-sub">Technologies I work with and enjoy</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal" id="skillProgramming">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Programming Languages</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip chip-primary">C</span><span class="chip chip-primary">C++</span><span class="chip chip-primary">Java</span><span class="chip chip-primary">Python</span><span class="chip chip-primary">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillFrontend">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span>Frontend</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip chip-accent">React.js</span><span class="chip">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillBackend">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            <span>Backend</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip chip-accent">Node.js</span><span class="chip">Express.js</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillDatabases">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span>Databases</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip chip-accent">MongoDB</span><span class="chip">Database Design</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillCloud">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <span>Cloud &amp; DevOps</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Linux</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillCS">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Core CS Concepts</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">DSA</span><span class="chip">OOP</span><span class="chip">DBMS</span><span class="chip">Operating Systems</span><span class="chip">Computer Networks</span><span class="chip">SDLC</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" id="skillTools">
+          <div class="skill-group-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <span>Tools &amp; Libraries</span>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Postman</span><span class="chip">VS Code</span><span class="chip">Pandas</span><span class="chip">NumPy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education" aria-label="Education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 05. Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-card reveal" id="eduJain">
+        <div class="edu-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="edu-content">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">Bachelor of Engineering — Computer Science &amp; Engineering</h3>
+              <span class="edu-school">Jain College of Engineering, Belagavi</span>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-year">2023 – 2027</span>
+              <div class="edu-cgpa"><span class="cgpa-label">CGPA</span><span class="cgpa-value">8.4</span></div>
+            </div>
+          </div>
+          <div class="edu-highlights">
+            <span class="edu-tag">Computer Science</span><span class="edu-tag">Full Stack Development</span><span class="edu-tag">AI &amp; Machine Learning</span><span class="edu-tag">Data Structures &amp; Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section section-dark" id="achievements" aria-label="Achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 06. Achievements</span>
+        <h2 class="section-title">Milestones</h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal" id="achieveIdeathon">
+          <div class="achievement-icon achievement-icon-gold">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">&#127950; First Place — Ideathon Competition</h3>
+            <p class="achievement-desc">Secured first place in the Ideathon competition, presenting an innovative technical solution recognized for creativity and engineering feasibility.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal" id="achieveNASA">
+          <div class="achievement-icon achievement-icon-blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">&#128640; NASA Space Apps Challenge 2025</h3>
+            <p class="achievement-desc">Participated in the global NASA Space Apps Challenge 2025, developing ExoVision AI — an ML-powered exoplanet detection platform using Kepler telescope data.</p>
+          </div>
+        </div>
+        <div class="achievement-card reveal" id="achieveArts">
+          <div class="achievement-icon achievement-icon-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <div class="achievement-content">
+            <h3 class="achievement-title">&#127912; Fine Arts Club Coordinator</h3>
+            <p class="achievement-desc">Serving as coordinator for the college's Fine Arts Club, organizing campus events, creative workshops, and cultural initiatives — blending technical and artistic thinking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact" aria-label="Contact me">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 07. Contact</span>
+        <h2 class="section-title">Let's Build Something Amazing.</h2>
+        <p class="section-sub">Have a project idea or an opportunity to discuss? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-links">
+            <a href="mailto:felixlingam@gmail.com" class="contact-item" id="contactEmailLink">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">felixlingam@gmail.com</span>
+              </div>
+              <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address" onclick="copyEmail(event)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </a>
+            <a href="https://github.com/FelixDevX" target="_blank" rel="noopener noreferrer" class="contact-item" id="contactGithubLink">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">FelixDevX</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/felix-lingam-9354b327a/" target="_blank" rel="noopener noreferrer" class="contact-item" id="contactLinkedinLink">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">felix-lingam-9354b327a</span>
+              </div>
+            </a>
+            <div class="contact-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Belagavi, Karnataka, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <p class="form-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              This form uses a mailto fallback — it will open your email client with the message pre-filled.
+            </p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" />
+                <span class="form-error" id="nameError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" />
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject" class="form-label">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="What is this about?" required />
+              <span class="form-error" id="subjectError" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Message <span aria-hidden="true">*</span></label>
+              <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Tell me about your project or opportunity..." required rows="5"></textarea>
+              <span class="form-error" id="messageError" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitContactForm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><span class="logo-bracket">&lt;</span>Felix<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span></div>
+        <p class="footer-tagline">Building digital experiences that feel different.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/FelixDevX" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footerGithubLink" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/felix-lingam-9354b327a/" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footerLinkedinLink" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:felixlingam@gmail.com" class="footer-social-link" id="footerEmailLink" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; <span id="currentYear"></span> Felix Y Lingam. Designed &amp; Built with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
